@@ -1,0 +1,13 @@
+{
+  "name": "wasm-loop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jake Klassen <jklassendev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "serve ."
+  },
+  "devDependencies": {
+    "serve": "^11.1.0"
+  }
+}
