@@ -5,9 +5,13 @@
   "author": "Jake Klassen <jklassendev@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "bench": "node bench/bench.js",
     "start": "serve ."
   },
   "devDependencies": {
     "serve": "^11.1.0"
+  },
+  "dependencies": {
+    "benchmark": "^2.1.4"
   }
 }

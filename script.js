@@ -20,7 +20,7 @@ const time = (fn, iterations = 10) => {
 };
 
 const jsLoop = () => {
-  const nums = Array.from({ length: 1_000_000 });
+  const nums = new Array(1_000_000);
 
   for (let i = 0; i < nums.length; ++i) {
     nums[i] = i * 2;
