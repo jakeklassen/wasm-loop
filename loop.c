@@ -1,7 +1,7 @@
 void loop()
 {
   const int SIZE = 1000000;
-  int nums[1000000] = {};
+  int nums[SIZE] = {};
 
   for (int i = 0; i < SIZE; ++i)
   {

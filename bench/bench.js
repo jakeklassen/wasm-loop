@@ -14,7 +14,6 @@ const jsLoop = () => {
 
 loadWebAssembly(path.resolve(__dirname, '../loop.wasm')).then(instance => {
   const wasmLoop = instance.exports.loop;
-
   const suite = new Benchmark.Suite();
 
   suite
@@ -22,6 +21,7 @@ loadWebAssembly(path.resolve(__dirname, '../loop.wasm')).then(instance => {
       jsLoop();
     })
     .add('WASM Loop', () => {
+      // @ts-ignore
       wasmLoop();
     })
     .on('cycle', function(event) {
