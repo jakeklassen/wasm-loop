@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 
-exports.loadWebAssembly = fileName =>
+exports.loadWebAssembly = (fileName) =>
   WebAssembly.instantiate(fs.readFileSync(fileName, {})).then(
     ({ instance }) => instance,
   );

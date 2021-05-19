@@ -12,7 +12,7 @@ const jsLoop = () => {
   }
 };
 
-loadWebAssembly(path.resolve(__dirname, '../loop.wasm')).then(instance => {
+loadWebAssembly(path.resolve(__dirname, '../loop.wasm')).then((instance) => {
   const wasmLoop = instance.exports.loop;
   const suite = new Benchmark.Suite();
 
@@ -24,10 +24,10 @@ loadWebAssembly(path.resolve(__dirname, '../loop.wasm')).then(instance => {
       // @ts-ignore
       wasmLoop();
     })
-    .on('cycle', function(event) {
+    .on('cycle', function (event) {
       console.log(String(event.target));
     })
-    .on('complete', function() {
+    .on('complete', function () {
       console.log('Fastest is ' + this.filter('fastest').map('name'));
     })
     .run({ async: true });

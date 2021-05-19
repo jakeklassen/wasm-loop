@@ -1,7 +1,11 @@
 void loop()
 {
-  const int SIZE = 1000000;
-  int nums[SIZE] = {};
+  enum
+  {
+    SIZE = 1000000
+  };
+
+  int nums[SIZE] = {0};
 
   for (int i = 0; i < SIZE; ++i)
   {

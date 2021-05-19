@@ -2,9 +2,9 @@
 
 function loadWebAssembly(fileName) {
   return fetch(fileName)
-    .then(response => response.arrayBuffer())
-    .then(bytes => WebAssembly.instantiate(bytes, {}))
-    .then(results => results.instance);
+    .then((response) => response.arrayBuffer())
+    .then((bytes) => WebAssembly.instantiate(bytes, {}))
+    .then((results) => results.instance);
 }
 
 const time = (fn, iterations = 10) => {
@@ -27,7 +27,7 @@ const jsLoop = () => {
   }
 };
 
-loadWebAssembly('loop.wasm').then(instance => {
+loadWebAssembly('loop.wasm').then((instance) => {
   const loop = instance.exports.loop;
   console.log('Finished compiling! Ready when you are...');
 
