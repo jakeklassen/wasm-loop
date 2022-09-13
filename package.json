@@ -9,7 +9,7 @@
     "start": "serve ."
   },
   "devDependencies": {
-    "serve": "^12.0.0"
+    "serve": "^14.0.1"
   },
   "dependencies": {
     "benchmark": "^2.1.4"
