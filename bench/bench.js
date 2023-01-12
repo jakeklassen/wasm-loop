@@ -1,8 +1,8 @@
 // @ts-check
 
-const Benchmark = require('benchmark');
-const path = require('path');
-const { loadWebAssembly } = require('./utils');
+import Benchmark from 'benchmark';
+import path from 'node:path';
+import { loadWebAssembly } from './utils.js';
 
 const jsLoop = () => {
   const nums = new Array(1_000_000);
@@ -12,7 +12,7 @@ const jsLoop = () => {
   }
 };
 
-loadWebAssembly(path.resolve(__dirname, '../loop.wasm')).then((instance) => {
+loadWebAssembly(new URL('../loop.wasm', import.meta.url)).then((instance) => {
   const wasmLoop = instance.exports.loop;
   const suite = new Benchmark.Suite();
 

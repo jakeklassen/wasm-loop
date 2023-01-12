@@ -1,13 +1,18 @@
 // @ts-check
 
-const fs = require('fs');
+import fs from 'node:fs';
 
-exports.loadWebAssembly = (fileName) =>
+/**
+ *
+ * @param {fs.PathOrFileDescriptor} fileName
+ * @returns
+ */
+export const loadWebAssembly = (fileName) =>
   WebAssembly.instantiate(fs.readFileSync(fileName, {})).then(
     ({ instance }) => instance,
   );
 
-exports.time = (fn, iterations = 10) => {
+export const time = (fn, iterations = 10) => {
   const times = [];
 
   Array.from({ length: iterations }, (_, v) => v).forEach((_, idx) => {
