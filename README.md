@@ -8,4 +8,4 @@ If you want to run `make`, you'll need `clang` to compile C -> WASM.
 
 ## Run
 
-`yarn start`
+`pnpm start`
